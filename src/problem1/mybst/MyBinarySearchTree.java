@@ -10,8 +10,8 @@ import problem1.node.TreeNode;
 
 // to implement BinarySearchTree
 public class MyBinarySearchTree<E> implements TreeAdt<E> {
-    int counter = 0;
     private TreeNode<E> root;
+    int counter = 0;
     private int noOfNodes = 0;
 
     private TreeNode<E> addRecursive(TreeNode<E> currentNode, E data) {
@@ -29,14 +29,13 @@ public class MyBinarySearchTree<E> implements TreeAdt<E> {
     }
 
 
+
     @Override
     public boolean add(E data) {
-        return false;
+        root = addRecursive(root, data);
+        noOfNodes++;
+        return true;
 
     }
 
-
-
-
 }
-
