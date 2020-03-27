@@ -24,6 +24,7 @@ public class MyMain {
         System.out.println("Pre order traversing");
         myBinarySearchTree.traversePreOrder(myBinarySearchTree.getRoot());
         // here first element in pre order same as last element in post order//
+        // here middle Node/element in preOrder and PostOrder traversing not same so false //
 
     }
 
