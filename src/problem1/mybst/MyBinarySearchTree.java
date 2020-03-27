@@ -55,5 +55,22 @@ public class MyBinarySearchTree<E> implements TreeAdt<E> {
         }
     }
 
+    public int numberofNodeWithNoLeftChild(TreeNode<E> currentNode) {
+        if (currentNode != null) {
+            if (currentNode.getLeftChild() == null) {
+                counter++;
+            }
+            numberofNodeWithNoLeftChild(currentNode.getRightChild());
+            numberofNodeWithNoLeftChild(currentNode.getLeftChild());
+
+
+        }
+        return counter;
+    }
+
+    public TreeNode<E> getRoot() {
+        return root;
+    }
+
 
 }
