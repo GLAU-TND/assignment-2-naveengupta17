@@ -11,8 +11,8 @@ import problem1.node.TreeNode;
 // to implement BinarySearchTree
 public class MyBinarySearchTree<E> implements TreeAdt<E> {
     private TreeNode<E> root;
-    int counter = 0;
     private int noOfNodes = 0;
+    int counter = 0;
 
     private TreeNode<E> addRecursive(TreeNode<E> currentNode, E data) {
         if (currentNode == null) {
@@ -29,7 +29,6 @@ public class MyBinarySearchTree<E> implements TreeAdt<E> {
     }
 
 
-
     @Override
     public boolean add(E data) {
         root = addRecursive(root, data);
@@ -37,5 +36,24 @@ public class MyBinarySearchTree<E> implements TreeAdt<E> {
         return true;
 
     }
+
+    public void visit(E data) {
+        System.out.print(data + " ");
+    }
+
+    public boolean isEmpty() {
+        return root == null;
+    }
+
+    public void printLeftChild(TreeNode<E> currentNode) {
+        if (currentNode != null) {
+            if (currentNode.getLeftChild() != null) {
+                visit(currentNode.getLeftChild().getData());
+            }
+            printLeftChild(currentNode.getLeftChild());
+            printLeftChild(currentNode.getRightChild());
+        }
+    }
+
 
 }
