@@ -19,8 +19,6 @@ public class MyMain {
         myBinarySearchTree.printLeftChild(myBinarySearchTree.getRoot());
         System.out.println();
         System.out.println(myBinarySearchTree.numberOfNodeWithNoLeftChild(myBinarySearchTree.getRoot()));
-
-
     }
 
 }

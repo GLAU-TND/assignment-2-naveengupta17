@@ -54,6 +54,14 @@ public class MyBinarySearchTree<E> implements TreeAdt<E> {
         }
     }
 
+    public void traversePreOrder(TreeNode<E> currentNode) {
+        if (currentNode != null) {
+            visit(currentNode.getData());
+            traversePreOrder(currentNode.getLeftChild());
+            traversePreOrder(currentNode.getRightChild());
+        }
+    }
+
 
     public void printLeftChild(TreeNode<E> currentNode) {
         if (currentNode != null) {
