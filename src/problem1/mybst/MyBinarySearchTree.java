@@ -45,6 +45,16 @@ public class MyBinarySearchTree<E> implements TreeAdt<E> {
         return root == null;
     }
 
+    public void traversePostOrder(TreeNode<E> currentNode) {
+        if (currentNode != null) {
+            traversePostOrder(currentNode.getLeftChild());
+            traversePostOrder(currentNode.getRightChild());
+            visit(currentNode.getData());
+
+        }
+    }
+
+
     public void printLeftChild(TreeNode<E> currentNode) {
         if (currentNode != null) {
             if (currentNode.getLeftChild() != null) {
