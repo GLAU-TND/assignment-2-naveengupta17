@@ -5,4 +5,6 @@ public interface QADT<E> {
 
     E remove();
 
+    E peek();
+
 }
