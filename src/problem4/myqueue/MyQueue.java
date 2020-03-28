@@ -16,7 +16,17 @@ public class MyQueue<E> implements ADT<E> {
 
     @Override
     public void enqueue(E data) {
-
+        Node<E> node = new Node<>(data);
+        if (front == null) {
+            node.next = null;
+            front = node;
+            rear = node;
+        } else {
+            node.setNext(rear.getNext());
+            rear.setNext(node);
+            rear = node;
+        }
+        size++;
 
     }
 
