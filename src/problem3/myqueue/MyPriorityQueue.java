@@ -67,6 +67,7 @@ public class MyPriorityQueue<E> implements QADT<E> {
 
     @Override
     public E peek() {
-        return null;
+        E data = front.getData();
+        return data;
     }
 }
