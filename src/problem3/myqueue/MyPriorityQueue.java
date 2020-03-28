@@ -45,6 +45,15 @@ public class MyPriorityQueue<E> implements QADT<E> {
 
     @Override
     public void add(E data) {
+        if (size == 0) {
+            Node<E> node = new Node<E>(data, null);
+            front = node;
+            rear = node;
+            size++;
+
+        } else {
+            sortedAdd(data);
+        }
 
     }
 
