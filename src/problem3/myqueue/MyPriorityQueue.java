@@ -70,4 +70,17 @@ public class MyPriorityQueue<E> implements QADT<E> {
         E data = front.getData();
         return data;
     }
+
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("[");
+        Node<E> temp = front;
+        for (int i = 0; i < size && temp != null; i++) {
+            E data = temp.getData();
+            sb.append(data);
+            sb.append((i < size - 1) ? ",\n" : "");
+            temp = temp.getNext();
+        }
+        sb.append("]");
+        return sb.toString();
+    }
 }
