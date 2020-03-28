@@ -7,12 +7,16 @@
 package problem5.student;
 // to store student information and properties
 public class Student {
-    private String name = null;
-    private int rollNo = 0;
+    private String name;
+    private int rollNumber;
+    private int backLogCounter;
 
-    public Student(String name, int rollNo) {
-        this.name = name;
-        this.rollNo = rollNo;
+    public int getBackLogCounter() {
+        return backLogCounter;
+    }
+
+    public void setBackLogCounter(int backLogCounter) {
+        this.backLogCounter = backLogCounter;
     }
 
     public String getName() {
@@ -23,13 +27,22 @@ public class Student {
         this.name = name;
     }
 
-    public int getRollNo() {
-        return rollNo;
+    public int getRollNumber() {
+        return rollNumber;
     }
 
-    public void setRollNo(int rollNo) {
-        this.rollNo = rollNo;
+    public void setRollNumber(int rollNumber) {
+        this.rollNumber = rollNumber;
     }
 
+    @Override
+    public String toString() {
+        return "---------------------------------------" + "\n" +
+                "Name -- " + getName() + "\n" +
+                "Roll Number -- " + getRollNumber() + "\n" +
+                "Back Log Value -- " + getBackLogCounter() + "\n" +
+                "---------------------------------------";
 
+
+    }
 }
