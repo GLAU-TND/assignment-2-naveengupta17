@@ -51,7 +51,7 @@ public class MyQueue<E> implements ADT<E> {
 
     @Override
     public int getSize() {
-        return 0;
+        return size;
     }
 
     private static class Node<E> {
