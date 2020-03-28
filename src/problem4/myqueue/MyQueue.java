@@ -54,6 +54,19 @@ public class MyQueue<E> implements ADT<E> {
         return size;
     }
 
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("[");
+        Node<E> temp = front;
+        for (int i = 0; i < size && temp != null; i++) {
+            E data = temp.getData();
+            sb.append(data);
+            sb.append((i < size - 1) ? "," : "");
+            temp = temp.getNext();
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
     private static class Node<E> {
         E data;
         Node<E> next;
