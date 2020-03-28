@@ -46,7 +46,7 @@ public class MyQueue<E> implements ADT<E> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     @Override
